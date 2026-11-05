@@ -135,6 +135,15 @@ function AppRoutes() {
         {/* Invalid URL */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+
+      {!isAdminPage && (
+        <footer className="site-footer">
+          <p>
+            Made with <span>❤️</span> by <strong>Sachin Yadav</strong>
+          </p>
+          <small>© 2026 ShopEase. All rights reserved.</small>
+        </footer>
+      )}
     </>
   );
 }
