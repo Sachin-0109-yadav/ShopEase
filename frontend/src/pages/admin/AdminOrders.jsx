@@ -7,6 +7,7 @@ import {
   Eye,
   X,
 } from "lucide-react";
+import { API_BASE_URL } from "../../api/axios";
 
 import {
   getAdminOrders,
@@ -400,7 +401,7 @@ export default function AdminOrders() {
                       src={
                         item.product_image.startsWith("http")
                           ? item.product_image
-                          : `http://localhost:8000${item.product_image}`
+                          : `${API_BASE_URL}${item.product_image}`
                       }
                       alt={item.product_name}
                     />

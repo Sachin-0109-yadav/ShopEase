@@ -1,4 +1,5 @@
 
+import os
 from pathlib import Path
 
 from fastapi import FastAPI
@@ -37,11 +38,17 @@ app = FastAPI(
 )
 
 
-# CORS configuration
+# CORS configuration: local development + deployed frontend.
 origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
 ]
+
+frontend_urls = os.getenv("FRONTEND_URL", "")
+for frontend_url in frontend_urls.split(","):
+    frontend_url = frontend_url.strip().rstrip("/")
+    if frontend_url and frontend_url not in origins:
+        origins.append(frontend_url)
 
 app.add_middleware(
     CORSMiddleware,

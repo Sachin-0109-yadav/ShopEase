@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     PG_HOST: str = "localhost"
     PG_PORT: int = 5432
     PG_DATABASE: str
+    PG_SSLMODE: str = "prefer"
 
     SECRET_KEY: str
     ALGORITHM: str = "HS256"

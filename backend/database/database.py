@@ -16,9 +16,10 @@ DATABASE_URL = URL.create(
     database=settings.PG_DATABASE,
 )
 
-# Create database engine.
+# Create database engine with configurable SSL.
 engine = create_engine(
     DATABASE_URL,
+    connect_args={"sslmode": settings.PG_SSLMODE},
     pool_pre_ping=True,
     echo=False
 )

@@ -1,3 +1,4 @@
+
 import "./AdminProductImages.css";
 import { useState } from "react";
 import {
@@ -5,8 +6,7 @@ import {
   setPrimaryProductImage,
   deleteProductImage,
 } from "../../api/adminApi";
-
-const API_BASE_URL = "http://localhost:8000";
+import { API_BASE_URL } from "../../api/axios";
 
 export default function AdminProductImages({
   product,
@@ -22,9 +22,7 @@ export default function AdminProductImages({
 
   const getImageUrl = (url) => {
     if (!url) return "";
-    return url.startsWith("http")
-      ? url
-      : `${API_BASE_URL}${url}`;
+    return url.startsWith("http") ? url : `${API_BASE_URL}${url}`;
   };
 
   const handleUpload = async (event) => {
@@ -52,11 +50,8 @@ export default function AdminProductImages({
 
       const updatedProduct = await onUpdated();
       setImages(updatedProduct?.images || []);
-
     } catch (err) {
-      setError(
-        err.response?.data?.detail || "Image upload failed."
-      );
+      setError(err.response?.data?.detail || "Image upload failed.");
     } finally {
       setLoading(false);
     }
@@ -71,7 +66,6 @@ export default function AdminProductImages({
 
       const updatedProduct = await onUpdated();
       setImages(updatedProduct?.images || []);
-
     } catch (err) {
       setError(
         err.response?.data?.detail || "Could not update primary image."
@@ -96,7 +90,6 @@ export default function AdminProductImages({
 
       const updatedProduct = await onUpdated();
       setImages(updatedProduct?.images || []);
-
     } catch (err) {
       setError(
         err.response?.data?.detail || "Could not delete image."
