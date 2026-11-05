@@ -1,0 +1,155 @@
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.admin-sidebar {
+  width: 250px;
+  min-width: 250px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #111827;
+  color: #ffffff;
+  padding: 25px 16px;
+}
+
+.admin-brand {
+  padding: 0 12px 28px;
+  border-bottom: 1px solid #374151;
+}
+
+.admin-brand h2 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.admin-brand p {
+  margin: 6px 0 0;
+  color: #9ca3af;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+.admin-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.admin-nav-link:hover {
+  background: #263449;
+  color: #ffffff;
+}
+
+.admin-nav-link.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.admin-sidebar-bottom {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #374151;
+}
+
+.admin-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-header {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 16px 30px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.admin-header h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 20px;
+}
+
+.admin-header p {
+  margin: 5px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.admin-header-badge {
+  padding: 8px 13px;
+  border-radius: 20px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .admin-brand {
+    padding-bottom: 15px;
+  }
+
+  .admin-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 15px;
+  }
+
+  .admin-nav-link {
+    padding: 10px;
+  }
+
+  .admin-sidebar-bottom {
+    margin-top: 15px;
+    padding-top: 10px;
+  }
+
+  .admin-header {
+    padding: 15px;
+  }
+
+  .admin-content {
+    padding: 15px;
+  }
+}

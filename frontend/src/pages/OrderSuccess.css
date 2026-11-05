@@ -1,0 +1,124 @@
+
+.order-success-page {
+  min-height: 80vh;
+  padding: 45px 18px;
+  background: #f8fafc;
+}
+
+.order-success-card {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 35px;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.success-icon {
+  display: block;
+  margin: 0 auto 18px;
+  color: #16a34a;
+}
+
+.order-success-card > h1 {
+  text-align: center;
+  font-size: 27px;
+  color: #166534;
+}
+
+.success-message {
+  text-align: center;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.success-order-number {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+  padding: 18px;
+  background: #f0fdf4;
+  border-radius: 9px;
+}
+
+.success-order-number strong {
+  color: #166534;
+}
+
+.success-section {
+  padding: 20px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.success-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 18px;
+  font-size: 19px;
+}
+
+.success-item,
+.success-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 13px 0;
+  font-size: 14px;
+}
+
+.success-total {
+  padding-top: 15px;
+  border-top: 1px solid #e5e7eb;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.success-section p {
+  color: #475569;
+  line-height: 1.6;
+  margin: 7px 0;
+}
+
+.success-payment {
+  padding: 15px;
+  background: #eff6ff;
+  color: #1e40af;
+  border-radius: 8px;
+  margin: 15px 0 22px;
+}
+
+.success-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.success-shop-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 22px;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.success-shop-button:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 600px) {
+  .order-success-card {
+    padding: 22px 17px;
+  }
+
+  .order-success-card > h1 {
+    font-size: 23px;
+  }
+}
