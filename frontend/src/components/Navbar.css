@@ -76,32 +76,68 @@
   background: #1d4ed8;
 }
 
-@media (max-width: 600px) {
+.navbar-menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  color: #172033;
+  cursor: pointer;
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
   .navbar-container {
-    padding: 0 12px;
     min-height: 65px;
-    gap: 10px;
+    padding: 0 16px;
+    position: relative;
   }
 
   .navbar-logo {
-    font-size: 19px;
+    font-size: 21px;
+  }
+
+  .navbar-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .navbar-links {
-    gap: 11px;
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 16px 16px;
+    background: #ffffff;
+    border-top: 1px solid #e8edf4;
+    border-bottom: 1px solid #e8edf4;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar-links.navbar-links-open {
+    display: flex;
   }
 
   .navbar-links a,
   .navbar-logout {
-    gap: 4px;
-    font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 10px;
+    font-size: 15px;
+    border-radius: 7px;
   }
 
-  .navbar-links svg {
-    width: 15px;
+  .navbar-links a:hover,
+  .navbar-logout:hover {
+    background: #f3f6fb;
   }
 
   .navbar-links .navbar-register {
-    padding: 9px;
+    justify-content: center;
+    margin-top: 6px;
   }
 }
